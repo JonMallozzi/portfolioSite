@@ -7,8 +7,8 @@ function Homepage() {
     return (
         <div className="App">
             <header className="App-header">
-                <p class="title">
-                    <h1> Jon Mallozzi's Portfolio </h1>
+                <p>
+                    <h1 class="title"> Jon Mallozzi's Portfolio </h1>
                     <h4 class="source">
                         <a href="https://www.github.com/JonMallozzi" class="links"> Github  </a>
                         |
