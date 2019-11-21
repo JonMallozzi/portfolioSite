@@ -1,7 +1,13 @@
+.title {
+    position: absolute;
+    top: 25%;
+
+}
+
 .source {
     position: absolute;
-    top: 385px;
-    left: 450px;
+    padding-top: 1%;
+    top: 50%
 }
 
 .links {
@@ -10,6 +16,6 @@
 
 .cos452 {
     position: absolute;
-    top: 430px;
-    left: 450px;
+    padding-top: 6%;
+    top: 55%;
 }

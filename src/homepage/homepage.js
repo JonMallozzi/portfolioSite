@@ -7,7 +7,7 @@ function Homepage() {
     return (
         <div className="App">
             <header className="App-header">
-                <p>
+                <p class="title">
                     <h1> Jon Mallozzi's Portfolio </h1>
                     <h4 class="source">
                         <a href="https://www.github.com/JonMallozzi" class="links"> Github  </a>

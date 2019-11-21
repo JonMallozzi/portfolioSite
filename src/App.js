@@ -4,11 +4,15 @@ import './homelink.css';
 import Homepage from './homepage/homepage';
 import Finalproject from './finalProject/finalProject';
 
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {HashRouter as Router, Switch, Route} from "react-router-dom";
 import {Link} from "react-router-dom";
 
 function App() {
+
+const baseUrl = process.env.PUBLIC_URL;
+
   return (
+
 
    <Router>
        <div className="App">
@@ -18,8 +22,8 @@ function App() {
            </Link>
 
            <Switch>
-               <Route path="/" exact component={Homepage}/>
-               <Route path="/finalproject" exact component={Finalproject}/>
+               <Route path={baseUrl + '/'} exact component={Homepage}/>
+               <Route path={baseUrl + '/finalproject'} exact component={Finalproject}/>
            </Switch>
 
        </div>
