@@ -21,6 +21,10 @@ function Homepage() {
                         <Link to="/finalproject" class="links">
                             Final Project
                         </Link>
+                        |
+                        <Link to="/cube" class="links">
+                            test cube
+                        </Link>
 
                     </h4>
 

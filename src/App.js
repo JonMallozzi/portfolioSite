@@ -3,6 +3,7 @@ import './App.css';
 import './homelink.css';
 import Homepage from './homepage/homepage';
 import Finalproject from './finalProject/finalProject';
+import DisplayCube from "./testCube/displayCube";
 
 import {HashRouter as Router, Switch, Route} from "react-router-dom";
 import {Link} from "react-router-dom";
@@ -24,6 +25,7 @@ const baseUrl = process.env.PUBLIC_URL;
            <Switch>
                <Route path={baseUrl + '/'} exact component={Homepage}/>
                <Route path={baseUrl + '/finalproject'} exact component={Finalproject}/>
+               <Route path={baseUrl + '/cube'} exact component={DisplayCube}/>
            </Switch>
 
        </div>
