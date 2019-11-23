@@ -9,9 +9,10 @@ function Finalproject() {
             <header className="App-header">
                 <p className="title">
                     <h1> Final Project </h1>
-                    To be done
                 </p>
-                <FinalScene/>
+                <div id="ThreeScene" class="ThreeScene">
+                    <FinalScene/>
+                </div>
             </header>
         </div>
     );

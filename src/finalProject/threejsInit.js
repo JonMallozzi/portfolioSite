@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
-import {cubeModel} from "./models/cube";
+import {defaultScene} from "./ThreeObjects/defaultScene";
 
 class FinalScene extends Component{
 
     componentDidMount(){
 
-        const width = this.mount.clientWidth;
-        const height = this.mount.clientHeight;
+        let test = document.getElementById('ThreeScene').offsetWidth;
 
-        //ADD SCENE
-        this.scene = new THREE.Scene();
+        console.log(test);
+
+        const width = window.innerWidth * .85;
+            //this.mount.clientWidth;
+        const height = window.innerHeight * .85;
+
+        //ADDS THE default scene
+        this.scene = defaultScene();
 
         //ADD CAMERA
         this.camera = new THREE.PerspectiveCamera(
@@ -24,14 +29,11 @@ class FinalScene extends Component{
 
         //ADD RENDERER
         this.renderer = new THREE.WebGLRenderer({ antialias: true });
-        this.renderer.setClearColor('#000000');
+       // this.renderer.setClearColor('#000000'); //black background
+        this.renderer.setClearColor('#87ceeb');
         this.renderer.setSize(width, height);
         this.mount.appendChild(this.renderer.domElement);
 
-        //ADD CUBE
-
-        this.cube = cubeModel();
-        this.scene.add(this.cube);
         this.start();
     }
 
@@ -51,8 +53,8 @@ class FinalScene extends Component{
     }
 
     animate = () => {
-        this.cube.rotation.x += 0.01;
-        this.cube.rotation.y += 0.01;
+        this.scene.getObjectByName('cube').rotation.x += 0.01;
+        this.scene.getObjectByName('cube').rotation.y += 0.01;
         this.renderScene();
         this.frameId = window.requestAnimationFrame(this.animate)
     }
