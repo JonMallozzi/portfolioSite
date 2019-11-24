@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
 import {defaultScene} from "./ThreeObjects/defaultScene";
+import {controls, reset} from "./ThreeObjects/controls";
 
 class FinalScene extends Component{
 
@@ -25,7 +26,7 @@ class FinalScene extends Component{
             1000
         );
 
-        this.camera.position.z = 4;
+        this.camera.position.set(0,2.3,10.8);
 
         //ADD RENDERER
         this.renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -33,6 +34,10 @@ class FinalScene extends Component{
         this.renderer.setClearColor('#87ceeb');
         this.renderer.setSize(width, height);
         this.mount.appendChild(this.renderer.domElement);
+
+        //adding controls to the scene
+        controls(this.camera);
+        reset();
 
         this.start();
     }

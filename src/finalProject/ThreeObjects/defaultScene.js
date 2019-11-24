@@ -1,21 +1,28 @@
 import * as THREE from 'three';
 import {cubeModel} from "./models/cube";
 import {road} from './models/road/roadObject'
+import {beegYoshi} from "./models/beegYoshi";
 
 export function defaultScene() {
 
     let scene = new THREE.Scene();
 
-    let cube = cubeModel();
+    const cube = cubeModel();
     cube.name = 'cube';
 
     cube.position.y += 2;
 
     scene.add(cube);
 
-    let roadGeo = road();
-    roadGeo.rotateX(90);
+    const roadGeo = road();
+    roadGeo.rotation.z = - Math.PI / 2;
+    roadGeo.rotateY(90);
     scene.add(roadGeo);
+
+    const yoshi = beegYoshi();
+    yoshi.position.y += 4;
+    yoshi.position.x += 4;
+    scene.add(yoshi);
 
 
     return scene;
