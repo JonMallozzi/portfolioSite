@@ -1,7 +1,8 @@
 import * as THREE from 'three';
-import {cubeModel} from "./models/cube";
+import {cubeModel} from "./models/cubes/cube";
 import {road} from './models/road/roadObject'
-import {beegYoshi} from "./models/beegYoshi";
+import {beegYoshi} from "./models/yoshi/beegYoshi";
+import {tv} from  './models/tv/tvModel';
 
 export function defaultScene() {
 
@@ -23,6 +24,12 @@ export function defaultScene() {
     yoshi.position.y += 4;
     yoshi.position.x += 4;
     scene.add(yoshi);
+
+
+
+    scene.add(tv());
+
+
 
 
     return scene;

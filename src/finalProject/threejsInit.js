@@ -67,6 +67,7 @@ class FinalScene extends Component{
     renderScene = () => {
         this.renderer.render(this.scene, this.camera);
     }
+
     render(){
         return(
             <div
