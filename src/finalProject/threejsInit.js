@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
 import {defaultScene} from "./ThreeObjects/defaultScene";
-import {controls, reset} from "./ThreeObjects/controls";
+import {controls, reset} from "./reuseableAlgorithms/controls";
 
 class FinalScene extends Component{
 

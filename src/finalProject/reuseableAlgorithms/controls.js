@@ -36,8 +36,13 @@ export function controls(camera){
 export function reset(){
     return document.addEventListener('keyup', event => {
        switch (event.key){
-           case 'ArrowUp' || 'ArrowDown' :
+           case 'ArrowUp':
                dz = 0;
+               console.log("hi");
+               break;
+           case 'ArrowDown':
+               dz = 0;
+               console.log("hi");
                break;
            default :
                break;
